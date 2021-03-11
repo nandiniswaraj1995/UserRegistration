@@ -53,7 +53,7 @@ namespace UserRegistration
 
         public bool isValidPassword(string password)
         {
-            string Regex_password = "^[a-zA-Z0-9]{8,}$";
+            string Regex_password = "^[A-Z][a-zA-Z0-9]{7,}$";
 
             Regex regex = new Regex(Regex_password);
             if (regex.IsMatch(password))
