@@ -8,7 +8,7 @@ namespace UserRegistration
 
     class Pattern
     {
-        public  bool isValidUserName(string userName)
+        public  bool isValidFirstName(string userName)
         {
             string userNameRegex = "^[A-Z][a-zA-Z]{2,}";
             Regex regex = new Regex(userNameRegex);
@@ -18,5 +18,16 @@ namespace UserRegistration
                 return false;
 
         }
+        public bool isValidLastName(string userName)
+        {
+            string userNameRegex = "^[A-Z][a-zA-Z]{2,}";
+            Regex regex = new Regex(userNameRegex);
+            if (regex.IsMatch(userName))
+                return true;
+            else
+                return false;
+
+        }
+
     }
 }
