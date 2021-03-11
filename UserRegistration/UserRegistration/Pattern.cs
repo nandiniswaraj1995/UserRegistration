@@ -54,7 +54,8 @@ namespace UserRegistration
         public bool isValidPassword(string password)
         {
             string Regex_password = "^(?=.*[a-z])(?=.*[A-Z])"
-                                     + "(?=\\S+$).{8,20}$";
+                                      + "(?=.*[0 - 9])"
+                                      + "(?=\\S+$).{8,20}$";
 
             Regex regex = new Regex(Regex_password);
             if (regex.IsMatch(password))
