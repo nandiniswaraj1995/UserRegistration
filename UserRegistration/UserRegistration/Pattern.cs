@@ -39,6 +39,17 @@ namespace UserRegistration
                 return false;
 
         }
+        public bool isValidMobileNumber(string mobileNumber)
+        {
+            string Regex_mobile = "^(0|91[ ])?[7-9][0-9]{9}$";
+
+            Regex regex = new Regex(Regex_mobile);
+            if (regex.IsMatch(mobileNumber))
+                return true;
+            else
+                return false;
+
+        }
 
 
     }
