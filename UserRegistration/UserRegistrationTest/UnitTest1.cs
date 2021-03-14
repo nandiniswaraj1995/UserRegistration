@@ -49,6 +49,20 @@ namespace UserRegistrationTest
             bool result = pattern.isValidEmail("abc.@gmail.com.com.com");
             Assert.AreEqual(false, result);
         }
+        [TestMethod]
+        public void Given_Mobile_Should_Returrns_True()
+        {
+            bool result = pattern.isValidMobileNumber("91 9876543210");
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Given_Mobile_Should_Returrns_False()
+        {
+            bool result = pattern.isValidMobileNumber("67891234567");
+            Assert.AreEqual(false, result);
+        }
+
 
 
     }
