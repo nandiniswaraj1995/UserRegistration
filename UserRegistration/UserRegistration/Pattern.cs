@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace UserRegistration
 {
 
-    class Pattern
+    public class Pattern
     {
         public  bool isValidFirstName(string userName)
         {
@@ -54,7 +54,7 @@ namespace UserRegistration
         public bool isValidPassword(string password)
         {
             string Regex_password = "^(?=.*[a-z])(?=.*[A-Z])"
-                                      + "(?=.*[0 - 9])"
+                                      + "(?=.*[0-9])"
                                       + "(?=.*[@#$%^&-+=])"
                                       + "(?=\\S+$).{8,20}$";
 
