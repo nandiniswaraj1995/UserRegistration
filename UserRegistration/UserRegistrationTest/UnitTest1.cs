@@ -36,7 +36,20 @@ namespace UserRegistrationTest
             Assert.AreEqual(false, result);
         }
 
-       
+        [TestMethod]
+        public void Given_Email_Should_Returrns_True()
+        {
+            bool result = pattern.isValidEmail("abc.xyz@bl.co.in");
+            Assert.AreEqual(true, result);
+        }
+
+        [TestMethod]
+        public void Given_Email_Should_Returrns_False()
+        {
+            bool result = pattern.isValidEmail("abc.@gmail.com.com.com");
+            Assert.AreEqual(false, result);
+        }
+
 
     }
 }
